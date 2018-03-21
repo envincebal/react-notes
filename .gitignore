@@ -2,13 +2,13 @@
 
 # dependencies
 /node_modules
+/.vscode
 
 # testing
 /coverage
 
 # production
 /build
-/.vscode
 
 # misc
 .DS_Store
