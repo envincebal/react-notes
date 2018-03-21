@@ -13,9 +13,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className="container">
-				<h1 className="title">Timestamped Notes App</h1>
+				<h1 className="title">React Notes App</h1>
 				<NoteForm />
+				<div className="entry-section">
 
+				</div>
 			</div>
 		);
 	}

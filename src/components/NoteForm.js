@@ -2,11 +2,11 @@ import React from 'react';
 
 const NoteForm = (props) => {
   return (
-    <div className="form-section">
-      <form>
-        <input type="text" autoFocus/><br/>
-        <textarea cols="30" rows="10"></textarea><br/>
-        <button>Add Note</button>
+    <div>
+      <form className="form-section">
+        <input className="title-input" type="text" autoFocus placeholder="Title" /><br/>
+        <textarea className="details-input" cols="20" rows="3" placeholder="Details" ></textarea><br/>
+        <button className="input-button">Add Note</button>
       </form>
     </div>
   )
