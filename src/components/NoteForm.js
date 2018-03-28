@@ -8,7 +8,6 @@ const NoteForm = (props) => {
           className="title-input"
           type="type"
           placeholder="Title"
-          onSubmit={props.prevent}
           value={props.titleValue}
           onChange={props.titleHandle}
         />
@@ -24,7 +23,7 @@ const NoteForm = (props) => {
         <br />
         <button
           className="input-button"
-          onClick={props.prevent}
+          onClick={props.onSubmit}
         >Add Note</button>
       </form>
     </div>

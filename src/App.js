@@ -12,16 +12,36 @@ class App extends Component {
 		}
 		this.updateTitle = this.updateTitle.bind(this);
 		this.updateDetails = this.updateDetails.bind(this);
-
+		this.submitHandler = this.submitHandler.bind(this);
 	}
 
-	updateTitle(event){
-		this.setState({title: event.target.value});
+	updateTitle(event) {
+		this.setState({ title: event.target.value });
 	}
 
-	updateDetails(event){
-		this.setState({details: event.target.value});
+	updateDetails(event) {
+		this.setState({ details: event.target.value });
 	}
+
+	submitHandler(e) {
+		e.preventDefault();
+		if (!this.state.title.length || !this.state.details.length) {
+			return;
+		}
+
+		const newNote = {
+			newTitle: this.state.title,
+			newDetails: this.state.details,
+			id: Date.now()
+		}
+		this.setState(prevState => ({
+			notes: prevState.notes.concat(newNote),
+			title: "",
+			details: ""
+		}))
+	}
+
+	on
 
 	render() {
 		return (
@@ -32,10 +52,16 @@ class App extends Component {
 					detailsValue={this.state.details}
 					titleHandle={this.updateTitle}
 					detailsHandle={this.updateDetails}
-					prevent={(e) => e.preventDefault()}
+					onSubmit={this.submitHandler}
 				/>
 				<div className="entry-section">
-					{this.state.notes.map(() => <NoteEntry/> )}
+					{this.state.notes.map((note) => (
+						<NoteEntry
+						key={note.id}
+							title={note.newTitle}
+							details={note.newDetails}
+						/>
+					))}
 				</div>
 			</div>
 		);

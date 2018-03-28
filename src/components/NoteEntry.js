@@ -5,12 +5,12 @@ const NoteEntry = (props) => {
   return (
     <div className="entry">
       <div className="entry-header">
-        <h2 className="entry-title">title</h2>
+        <h2 className="entry-title">{props.title}</h2>
         <p className="timestamp">Tue Mar 20 2018 00:35:48</p>
       </div>
        <hr />
       <div className="entry-content">
-        <p className="details"></p>
+        <p className="details">{props.details}</p>
         <div className="entry-buttons">
           <button className="edit">Edit</button>
           <button className="delete">Delete</button>

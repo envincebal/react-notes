@@ -54,7 +54,6 @@
             border: none;
             height: 1px; }
           * body .container .entry-section .entry .entry-content {
-            display: none;
             padding: 10px;
             background-color: #a5f19e; }
             * body .container .entry-section .entry .entry-content .details {
