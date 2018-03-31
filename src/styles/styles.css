@@ -17,14 +17,16 @@
         font-size: 50px;
         margin-bottom: 20px; }
       * body .container .title-input,
-      * body .container .details-input {
+      * body .container .details-input,
+      * body .container .edit-title,
+      * body .container .edit-details {
         max-width: 600px;
         width: 100%;
         margin: 5px 0;
         border: none;
         font-size: 25px;
         padding: 5px;
-        background-color: #eeeded; }
+        background-color: #f7f3c4; }
       * body .container .input-button {
         font-size: 40px;
         padding: 10px;
@@ -44,9 +46,10 @@
             cursor: pointer;
             background-color: #7add71; }
             * body .container .entry-section .entry .entry-header .entry-title {
-              font-size: 30px; }
-            * body .container .entry-section .entry .entry-header .timestamp {
-              font-weight: 700; }
+              font-size: 30px;
+              margin-bottom: 10px; }
+            * body .container .entry-section .entry .entry-header .click-details {
+              font-style: italic; }
           * body .container .entry-section .entry .entry-header:hover {
             background-color: #4fb945; }
           * body .container .entry-section .entry hr {
@@ -57,18 +60,19 @@
             padding: 10px;
             background-color: #a5f19e; }
             * body .container .entry-section .entry .entry-content .details {
-              text-align: left; }
+              text-align: left;
+              background-color: #f8fdab;
+              border: 1px solid #000;
+              padding: 10px; }
             * body .container .entry-section .entry .entry-content .entry-buttons {
-              text-align: right;
               margin-top: 10px; }
-              * body .container .entry-section .entry .entry-content .entry-buttons .edit,
               * body .container .entry-section .entry .entry-content .entry-buttons .delete {
                 font-size: 20px;
                 margin: 0 5px;
-                padding: 5px;
+                padding: 5px 50px;
+                text-align: center;
                 cursor: pointer;
-                border: none; }
-              * body .container .entry-section .entry .entry-content .entry-buttons .edit {
-                background-color: #8093ff; }
-              * body .container .entry-section .entry .entry-content .entry-buttons .delete {
+                border: none;
                 background-color: #fd4949; }
+          * body .container .entry-section .entry .hide-details {
+            display: none; }

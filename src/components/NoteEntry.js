@@ -1,25 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const NoteEntry = (props) => {
+class NoteEntry extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: false
+    }
+    this.displayToggle = this.displayToggle.bind(this);
+  }
 
-  return (
-    <div className="entry">
-      <div className="entry-header">
-        <h2 className="entry-title">{props.title}</h2>
-        <p className="timestamp">Tue Mar 20 2018 00:35:48</p>
-      </div>
-       <hr />
-      <div className="entry-content">
-        <p className="details">{props.details}</p>
-        <div className="entry-buttons">
-          <button className="edit">Edit</button>
-          <button className="delete">Delete</button>
+  displayToggle() {
+    this.setState({
+      display: !this.state.display
+    })
+  }
+
+  render() {
+    return (
+      <div className="entry">
+        <div className="entry-header" onClick={this.displayToggle}>
+          <h2 className="entry-title">{this.props.title}</h2>
+          <p className="click-details">{"(Click to " + (!this.state.display ? "show details)" : "hide details)")}</p>
+        </div>
+        <hr />
+        <div className={"entry-content " + (!this.state.display ? "hide-details" : null)}>
+          <p className="details">{this.props.details}</p>
+
+          <div className="entry-buttons">
+            <button className="delete" onClick={this.props.deleteNote}>Delete</button>
+          </div>
         </div>
       </div>
-    </div>
-
-  )
-
+    )
+  }
 }
 
 export default NoteEntry;

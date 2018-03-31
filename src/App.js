@@ -13,6 +13,8 @@ class App extends Component {
 		this.updateTitle = this.updateTitle.bind(this);
 		this.updateDetails = this.updateDetails.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
+		this.deleteHandler = this.deleteHandler.bind(this);
+
 	}
 
 	updateTitle(event) {
@@ -31,8 +33,7 @@ class App extends Component {
 
 		const newNote = {
 			newTitle: this.state.title,
-			newDetails: this.state.details,
-			id: Date.now()
+			newDetails: this.state.details
 		}
 		this.setState(prevState => ({
 			notes: prevState.notes.concat(newNote),
@@ -41,7 +42,11 @@ class App extends Component {
 		}))
 	}
 
-	on
+	deleteHandler(id) {
+		this.setState(prevState => ({
+			notes: prevState.notes.filter((el)=> el !== id)
+		}))
+	}
 
 	render() {
 		return (
@@ -55,11 +60,12 @@ class App extends Component {
 					onSubmit={this.submitHandler}
 				/>
 				<div className="entry-section">
-					{this.state.notes.map((note) => (
+					{this.state.notes.map((note,i) => (
 						<NoteEntry
-						key={note.id}
+							key={i}
 							title={note.newTitle}
 							details={note.newDetails}
+							deleteNote={this.deleteHandler.bind(this,note)} 
 						/>
 					))}
 				</div>

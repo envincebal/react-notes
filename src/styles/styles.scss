@@ -12,30 +12,32 @@ $mainBlack: #2A2A2A;
 			padding: 30px 10px;
 			text-align: center;
 			.title {
-				color: rgb(22, 206, 197);
+				color: #16cec5;
 				font-weight: 400;
 				font-size: 50px;
 				margin-bottom: 20px;
 			}
 			.title-input,
-			.details-input {
+			.details-input,
+			.edit-title,
+			.edit-details {
 				max-width: 600px;
 				width: 100%;
 				margin: 5px 0;
 				border: none;
 				font-size: 25px;
 				padding: 5px;
-				background-color: rgb(238, 237, 237)
+				background-color: rgb(247, 243, 196)
 			}
 			.input-button {
 				font-size: 40px;
 				padding: 10px;
 				border: none;
 				cursor: pointer;
-				background-color: rgb(250, 121, 34);
+				background-color: #fa7922;
 			}
 			.input-button:hover {
-				background-color: rgb(190, 62, 58);
+				background-color: #be3e3a;
 				color: $mainBlack;
 			}
 			.entry-section {
@@ -46,16 +48,17 @@ $mainBlack: #2A2A2A;
 					.entry-header {
 						padding: 10px;
 						cursor: pointer;
-						background-color: rgb(122, 221, 113);
+						background-color: #7add71;
 						.entry-title {
 							font-size: 30px;
+							margin-bottom: 10px;
 						}
-						.timestamp {
-							font-weight: 700;
+						.click-details{
+							font-style: italic;
 						}
 					}
 					.entry-header:hover {
-						background-color: rgb(79, 185, 69);
+						background-color: #4fb945;
 					}
 					hr {
 						background-color: #000;
@@ -64,28 +67,30 @@ $mainBlack: #2A2A2A;
 					}
 					.entry-content {
 						padding: 10px;
-						background-color: rgb(165, 241, 158);
+						background-color: #a5f19e;
 						.details {
 							text-align: left;
+							background-color: #f8fdab;
+							border: 1px solid #000;
+							padding: 10px;
 						}
+
+				
 						.entry-buttons {
-							text-align: right;
 							margin-top: 10px;
-							.edit,
 							.delete {
 								font-size: 20px;
 								margin: 0 5px;
-								padding: 5px;
+								padding: 5px 50px;
+								text-align: center;
 								cursor: pointer;
 								border: none;
-							}
-							.edit {
-								background-color: rgb(128, 147, 255);
-							}
-							.delete {
-								background-color: rgb(253, 73, 73);
+								background-color: #fd4949;
 							}
 						}
+					}
+					.hide-details {
+						display: none;
 					}
 				}
 			}
