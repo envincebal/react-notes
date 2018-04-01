@@ -44,7 +44,7 @@ class App extends Component {
 
 	deleteHandler(id) {
 		this.setState(prevState => ({
-			notes: prevState.notes.filter((el)=> el !== id)
+			notes: prevState.notes.filter((el) => el !== id)
 		}))
 	}
 
@@ -60,12 +60,12 @@ class App extends Component {
 					onSubmit={this.submitHandler}
 				/>
 				<div className="entry-section">
-					{this.state.notes.map((note,i) => (
+					{this.state.notes.map((note, i) => (
 						<NoteEntry
-							key={i}
+							key={note.newTitle}
 							title={note.newTitle}
 							details={note.newDetails}
-							deleteNote={this.deleteHandler.bind(this,note)} 
+							deleteNote={this.deleteHandler.bind(this, note)}
 						/>
 					))}
 				</div>

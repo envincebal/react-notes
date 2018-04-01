@@ -27,7 +27,7 @@ $mainBlack: #2A2A2A;
 				border: none;
 				font-size: 25px;
 				padding: 5px;
-				background-color: rgb(247, 243, 196)
+				background-color: #f7f3c4
 			}
 			.input-button {
 				font-size: 40px;
@@ -53,7 +53,7 @@ $mainBlack: #2A2A2A;
 							font-size: 30px;
 							margin-bottom: 10px;
 						}
-						.click-details{
+						.click-details {
 							font-style: italic;
 						}
 					}
@@ -68,16 +68,30 @@ $mainBlack: #2A2A2A;
 					.entry-content {
 						padding: 10px;
 						background-color: #a5f19e;
+						.details-title{
+							text-align: left;
+						}
 						.details {
 							text-align: left;
-							background-color: #f8fdab;
-							border: 1px solid #000;
 							padding: 10px;
 						}
-
-				
 						.entry-buttons {
 							margin-top: 10px;
+							.edit,
+							.delete,
+							.save {
+								font-size: 20px;
+								margin: 0 5px;
+								padding: 5px;
+								padding: 5px 40px;
+								text-align: center;
+								cursor: pointer;
+								border: none;
+							}
+							.edit,
+							.save {
+								background-color: #8093ff;
+							}
 							.delete {
 								font-size: 20px;
 								margin: 0 5px;

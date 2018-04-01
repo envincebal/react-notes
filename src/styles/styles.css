@@ -59,13 +59,26 @@
           * body .container .entry-section .entry .entry-content {
             padding: 10px;
             background-color: #a5f19e; }
+            * body .container .entry-section .entry .entry-content .details-title {
+              text-align: left; }
             * body .container .entry-section .entry .entry-content .details {
               text-align: left;
-              background-color: #f8fdab;
-              border: 1px solid #000;
               padding: 10px; }
             * body .container .entry-section .entry .entry-content .entry-buttons {
               margin-top: 10px; }
+              * body .container .entry-section .entry .entry-content .entry-buttons .edit,
+              * body .container .entry-section .entry .entry-content .entry-buttons .delete,
+              * body .container .entry-section .entry .entry-content .entry-buttons .save {
+                font-size: 20px;
+                margin: 0 5px;
+                padding: 5px;
+                padding: 5px 40px;
+                text-align: center;
+                cursor: pointer;
+                border: none; }
+              * body .container .entry-section .entry .entry-content .entry-buttons .edit,
+              * body .container .entry-section .entry .entry-content .entry-buttons .save {
+                background-color: #8093ff; }
               * body .container .entry-section .entry .entry-content .entry-buttons .delete {
                 font-size: 20px;
                 margin: 0 5px;

@@ -1,6 +1,7 @@
 {
   "name": "react-notes",
   "version": "0.1.0",
+  "homepage": "http://envincebal.github.io/react-notes",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
@@ -12,6 +13,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
