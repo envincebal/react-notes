@@ -9,57 +9,64 @@ class NoteEntry extends Component {
       editTitle: this.props.title,
       editDetails: this.props.details
     }
-    this.displayToggle = this.displayToggle.bind(this);
-    this.edit = this.edit.bind(this);
-    this.save = this.save.bind(this);
   }
 
-  displayToggle() {
+  displayToggle = () => {
     this.setState(prevState => ({
       display: !prevState.display
     }))
   }
 
-  edit() {
+  edit = () => {
     this.setState({
       editing: true
     })
   }
 
-  save() {
+  save = () => {
     let titleVal = this.refs.updateTitle.value;
     let detailsVal = this.refs.updateDetails.value;
-    this.setState({
-      editTitle: titleVal,
-      editDetails: detailsVal,
-      editing: false
-    })
+
+    if (!titleVal.length || !detailsVal.length) {
+      return;
+    } else {
+      this.setState({
+        editTitle: titleVal,
+        editDetails: detailsVal,
+        editing: false
+      })
+    }
   }
 
   render() {
+    const editedTitle = this.state.editTitle;
+    const editedDetails = this.state.editDetails;
+    const editing = this.state.editing;
+    const display = this.state.display;
+
     return (
       <div className="entry">
-        <div className="entry-header" onClick={this.state.editing ? null : this.displayToggle}>
-          {this.state.editing ? (
-            <input ref="updateTitle" className="edit-title" type="text" defaultValue={this.state.editTitle} />
+        <div className="entry-header" onClick={editing ? null : this.displayToggle}>
+          {editing ? (
+            <input ref="updateTitle" className="edit-title" type="text" defaultValue={editedTitle} />
           ) : (
-              <h2 className="entry-title">{this.state.editTitle}</h2>
+              <h2 className="entry-title">{editedTitle}</h2>
             )}
-            {}
-          <p className={"click-details " + (this.state.editing ? "hide-details" : null)}>{"(Click here to " + (this.state.display ? "hide" : "show") + " details)"}</p>
+          {}
+          <p className={"click-details " + (editing ? "hide-details" : null)}>{"(Click here to " + (display ? "hide" : "show") + " details)"}</p>
         </div>
         <hr />
-        <div className={"entry-content " + (!this.state.display ? "hide-details" : null)}>
-          {this.state.editing ? (
-            <textarea ref="updateDetails" className="edit-details" cols="10" rows="2" defaultValue={this.state.editDetails}></textarea>
+        <div className={"entry-content " + (!display ? "hide-details" : null)}>
+          {editing ? (
+            <textarea ref="updateDetails" className="edit-details" cols="10" rows="2" defaultValue={editedDetails}></textarea>
           ) : (
-            <div>
-              <h3 className="details-title">Details:</h3>
-              <p className="details">{this.state.editDetails}</p>
-            </div>
+              <div>
+                <h3 className="details-title">Details:</h3>
+                <p className="details">{editedDetails}</p>
+              </div>
             )}
           <div className="entry-buttons">
-            {this.state.editing ? (
+            {editing ? (
               <button className="save" onClick={this.save}>Save</button>
             ) : (
                 <button className="edit" onClick={this.edit}>Edit</button>

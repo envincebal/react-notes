@@ -10,22 +10,17 @@ class App extends Component {
 			title: "",
 			details: ""
 		}
-		this.updateTitle = this.updateTitle.bind(this);
-		this.updateDetails = this.updateDetails.bind(this);
-		this.submitHandler = this.submitHandler.bind(this);
-		this.deleteHandler = this.deleteHandler.bind(this);
-
 	}
 
-	updateTitle(event) {
+	updateTitle = (event) => {
 		this.setState({ title: event.target.value });
 	}
 
-	updateDetails(event) {
+	updateDetails = (event) => {
 		this.setState({ details: event.target.value });
 	}
 
-	submitHandler(e) {
+	submitHandler = (e) => {
 		e.preventDefault();
 		if (!this.state.title.length || !this.state.details.length) {
 			return;
@@ -42,7 +37,7 @@ class App extends Component {
 		}))
 	}
 
-	deleteHandler(id) {
+	deleteHandler = (id) => {
 		this.setState(prevState => ({
 			notes: prevState.notes.filter((el) => el !== id)
 		}))
