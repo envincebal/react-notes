@@ -1,18 +1,24 @@
 {
   "name": "react-notes",
   "version": "0.1.0",
+  "homepage": "http://envincebal.github.io/react-notes",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
+    "react": "^16.3.2",
     "react-addons-css-transition-group": "^15.6.2",
     "react-addons-transition-group": "^15.6.2",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.2",
     "react-scripts": "1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "hoek": "^5.0.3"
   }
 }
