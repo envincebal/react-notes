@@ -23,8 +23,9 @@ const NoteForm = (props) => {
         <br />
         <button
           className="input-button"
-          onClick={props.onSubmit}
-        >Add Note</button>
+          onClick={props.onSubmit}>
+          Add Note
+        </button>
       </form>
     </div>
   )
