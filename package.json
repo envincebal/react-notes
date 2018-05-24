@@ -1,7 +1,7 @@
 {
   "name": "react-notes",
   "version": "0.1.0",
-  "homepage": "http://envincebal.github.io/react-notes",
+  "homepage": "https://envincebal.github.io/react-notes",
   "private": true,
   "dependencies": {
     "react": "^16.3.2",
