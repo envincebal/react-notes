@@ -53,7 +53,7 @@ class NoteEntry extends Component {
               <h2 className="entry-title">{editedTitle}</h2>
             )}
           {}
-          <p className={"click-details " + (editing ? "hide-details" : null)}>{"(Click here to " + (display ? "hide" : "show") + " details)"}</p>
+          <p className={"click-details " + (editing ? "hide-details" : null)}>{"(Click to " + (display ? "hide" : "show") + " details)"}</p>
         </div>
         <hr />
         <div className={"entry-content " + (!display ? "hide-details" : null)}>

@@ -12,7 +12,7 @@ $mainBlack: #2A2A2A;
 			padding: 30px 10px;
 			text-align: center;
 			.title {
-				color: #16cec5;
+				color: #75dbd6;
 				font-weight: 400;
 				font-size: 50px;
 				margin-bottom: 20px;
@@ -27,18 +27,14 @@ $mainBlack: #2A2A2A;
 				border: none;
 				font-size: 25px;
 				padding: 5px;
-				background-color: #f7f3c4
+				background-color: #fff;
 			}
 			.input-button {
 				font-size: 40px;
 				padding: 10px;
 				border: none;
 				cursor: pointer;
-				background-color: #fa7922;
-			}
-			.input-button:hover {
-				background-color: #be3e3a;
-				color: $mainBlack;
+				background-color: #8ff361;
 			}
 			.entry-section {
 				margin-top: 30px;
@@ -48,7 +44,7 @@ $mainBlack: #2A2A2A;
 					.entry-header {
 						padding: 10px;
 						cursor: pointer;
-						background-color: #7add71;
+						background-color: #f8ce5c;
 						.entry-title {
 							font-size: 30px;
 							margin-bottom: 10px;
@@ -57,9 +53,6 @@ $mainBlack: #2A2A2A;
 							font-style: italic;
 						}
 					}
-					.entry-header:hover {
-						background-color: #4fb945;
-					}
 					hr {
 						background-color: #000;
 						border: none;
@@ -67,7 +60,7 @@ $mainBlack: #2A2A2A;
 					}
 					.entry-content {
 						padding: 10px;
-						background-color: #a5f19e;
+						background-color: #f8da86;
 						.details-title{
 							text-align: left;
 						}
@@ -90,7 +83,7 @@ $mainBlack: #2A2A2A;
 							}
 							.edit,
 							.save {
-								background-color: #8093ff;
+								background-color: #9cabfd;
 							}
 							.delete {
 								font-size: 20px;
@@ -99,7 +92,7 @@ $mainBlack: #2A2A2A;
 								text-align: center;
 								cursor: pointer;
 								border: none;
-								background-color: #fd4949;
+								background-color: #ff7e7e;
 							}
 						}
 					}

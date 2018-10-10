@@ -12,7 +12,7 @@
       padding: 30px 10px;
       text-align: center; }
       * body .container .title {
-        color: #16cec5;
+        color: #75dbd6;
         font-weight: 400;
         font-size: 50px;
         margin-bottom: 20px; }
@@ -26,16 +26,13 @@
         border: none;
         font-size: 25px;
         padding: 5px;
-        background-color: #f7f3c4; }
+        background-color: #fff; }
       * body .container .input-button {
         font-size: 40px;
         padding: 10px;
         border: none;
         cursor: pointer;
-        background-color: #fa7922; }
-      * body .container .input-button:hover {
-        background-color: #be3e3a;
-        color: #2A2A2A; }
+        background-color: #8ff361; }
       * body .container .entry-section {
         margin-top: 30px; }
         * body .container .entry-section .entry {
@@ -44,21 +41,19 @@
           * body .container .entry-section .entry .entry-header {
             padding: 10px;
             cursor: pointer;
-            background-color: #7add71; }
+            background-color: #f8ce5c; }
             * body .container .entry-section .entry .entry-header .entry-title {
               font-size: 30px;
               margin-bottom: 10px; }
             * body .container .entry-section .entry .entry-header .click-details {
               font-style: italic; }
-          * body .container .entry-section .entry .entry-header:hover {
-            background-color: #4fb945; }
           * body .container .entry-section .entry hr {
             background-color: #000;
             border: none;
             height: 1px; }
           * body .container .entry-section .entry .entry-content {
             padding: 10px;
-            background-color: #a5f19e; }
+            background-color: #f8da86; }
             * body .container .entry-section .entry .entry-content .details-title {
               text-align: left; }
             * body .container .entry-section .entry .entry-content .details {
@@ -78,7 +73,7 @@
                 border: none; }
               * body .container .entry-section .entry .entry-content .entry-buttons .edit,
               * body .container .entry-section .entry .entry-content .entry-buttons .save {
-                background-color: #8093ff; }
+                background-color: #9cabfd; }
               * body .container .entry-section .entry .entry-content .entry-buttons .delete {
                 font-size: 20px;
                 margin: 0 5px;
@@ -86,6 +81,6 @@
                 text-align: center;
                 cursor: pointer;
                 border: none;
-                background-color: #fd4949; }
+                background-color: #ff7e7e; }
           * body .container .entry-section .entry .hide-details {
             display: none; }
