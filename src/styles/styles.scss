@@ -11,8 +11,12 @@ $mainBlack: #2A2A2A;
 			margin: 0 auto;
 			padding: 30px 10px;
 			text-align: center;
+			.error-message {
+				color:#e93a3a;
+				font-size: 24px;
+			}
 			.title {
-				color: #75dbd6;
+				color: #15c9c0;
 				font-weight: 400;
 				font-size: 50px;
 				margin-bottom: 20px;
@@ -61,6 +65,7 @@ $mainBlack: #2A2A2A;
 					.entry-content {
 						padding: 10px;
 						background-color: #f8da86;
+						white-space: pre-line;
 						.details-title{
 							text-align: left;
 						}

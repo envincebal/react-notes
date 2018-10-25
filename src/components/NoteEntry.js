@@ -6,8 +6,10 @@ class NoteEntry extends Component {
     this.state = {
       display: false,
       editing: false,
+      error: false,
       editTitle: this.props.title,
-      editDetails: this.props.details
+      editDetails: this.props.details,
+
     }
   }
 
@@ -20,7 +22,8 @@ class NoteEntry extends Component {
   edit = () => {
     this.setState({
       editing: true
-    })
+    });
+    return;
   }
 
   save = () => {
@@ -28,12 +31,15 @@ class NoteEntry extends Component {
     let detailsVal = this.refs.updateDetails.value;
 
     if (!titleVal.length || !detailsVal.length) {
-      return;
+      this.setState({
+        error: true
+      })
     } else {
       this.setState({
         editTitle: titleVal,
         editDetails: detailsVal,
-        editing: false
+        editing: false,
+        error: false
       })
     }
   }
@@ -43,6 +49,7 @@ class NoteEntry extends Component {
     const editedDetails = this.state.editDetails;
     const editing = this.state.editing;
     const display = this.state.display;
+    const error = this.state.error;
 
     return (
       <div className="entry">
@@ -65,7 +72,9 @@ class NoteEntry extends Component {
                 <p className="details">{editedDetails}</p>
               </div>
             )}
+          {error && <p className="error-message">Please fill in both title and details</p>}
           <div className="entry-buttons">
+
             {editing ? (
               <button className="save" onClick={this.save}>Save</button>
             ) : (
