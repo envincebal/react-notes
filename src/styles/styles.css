@@ -57,7 +57,8 @@
           * body .container .entry-section .entry .entry-content {
             padding: 10px;
             background-color: #f8da86;
-            white-space: pre-line; }
+            white-space: pre-line;
+            word-wrap: break-word; }
             * body .container .entry-section .entry .entry-content .details-title {
               text-align: left; }
             * body .container .entry-section .entry .entry-content .details {
