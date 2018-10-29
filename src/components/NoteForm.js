@@ -1,6 +1,11 @@
 import React from 'react';
 
 const NoteForm = (props) => {
+  const { titleValue,
+    titleHandle,
+    detailsValue,
+    detailsHandle,
+    onSubmit } = props;
   return (
     <div>
       <form className="form-section">
@@ -8,8 +13,8 @@ const NoteForm = (props) => {
           className="title-input"
           type="type"
           placeholder="Title"
-          value={props.titleValue}
-          onChange={props.titleHandle}
+          value={titleValue}
+          onChange={titleHandle}
         />
         <br />
         <textarea
@@ -17,13 +22,13 @@ const NoteForm = (props) => {
           cols="20"
           rows="3"
           placeholder="Details"
-          value={props.detailsValue}
-          onChange={props.detailsHandle}
-          />
+          value={detailsValue}
+          onChange={detailsHandle}
+        />
         <br />
         <button
           className="input-button"
-          onClick={props.onSubmit}>
+          onClick={onSubmit}>
           Add Note
         </button>
       </form>

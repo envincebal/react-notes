@@ -22,8 +22,9 @@ class App extends Component {
 	}
 
 	submitHandler = (e) => {
+		const {title, details} = this.state;
 		e.preventDefault();
-		if (!this.state.title.length || !this.state.details.length) {
+		if (!title.length || !details.length) {
 			this.setState({
 				error: true
 			});
@@ -31,8 +32,8 @@ class App extends Component {
 		}
 
 		const newNote = {
-			newTitle: this.state.title,
-			newDetails: this.state.details
+			newTitle: title,
+			newDetails: details
 		}
 		this.setState(prevState => ({
 			notes: prevState.notes.concat(newNote),
@@ -49,21 +50,21 @@ class App extends Component {
 	}
 
 	render() {
-		const error = this.state.error;
+		const {title, details, error, notes} = this.state;
 		return (
 			<div className="container">
 				<h1 className="title">React Notes App</h1>
 				{error && <p className="error-message">Please fill in both title and details</p>}
 				<NoteForm
-					titleValue={this.state.title}
-					detailsValue={this.state.details}
+					titleValue={title}
+					detailsValue={details}
 					titleHandle={this.updateTitle}
 					detailsHandle={this.updateDetails}
 					onSubmit={this.submitHandler}
 				/>
 
 				<div className="entry-section">
-					{this.state.notes.map((note, i) => (
+					{notes.map((note, i) => (
 						<NoteEntry
 							key={note.newTitle}
 							title={note.newTitle}

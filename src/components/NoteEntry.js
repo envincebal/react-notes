@@ -45,11 +45,12 @@ class NoteEntry extends Component {
   }
 
   render() {
-    const editedTitle = this.state.editTitle;
-    const editedDetails = this.state.editDetails;
-    const editing = this.state.editing;
-    const display = this.state.display;
-    const error = this.state.error;
+    const {
+      editedTitle,
+      editedDetails,
+      editing,
+      display,
+      error } = this.state;
 
     return (
       <div className="entry">
