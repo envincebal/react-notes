@@ -8,7 +8,7 @@ class NoteEntry extends Component {
       editing: false,
       error: false,
       editTitle: this.props.title,
-      editDetails: this.props.details,
+      editDetails: this.props.details
 
     }
   }
@@ -45,12 +45,10 @@ class NoteEntry extends Component {
   }
 
   render() {
-    const {
-      editedTitle,
-      editedDetails,
-      editing,
-      display,
-      error } = this.state;
+    const { editing, display, error } = this.state;
+    const editedTitle = this.state.editTitle;
+    const editedDetails = this.state.editDetails;
+
 
     return (
       <div className="entry">
