@@ -4,6 +4,7 @@
   "homepage": "https://envincebal.github.io/react-notes",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.10.0",
     "react": "^16.3.2",
     "react-addons-css-transition-group": "^15.6.2",
     "react-addons-transition-group": "^15.6.2",
@@ -11,6 +12,7 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
+    "compile:sass": "node-sass ./src/styles/styles.scss ./src/styles/styles.css -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",

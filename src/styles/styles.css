@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 body {
   background-color: #2A2A2A;
@@ -58,7 +57,9 @@ hr {
 .entry-header {
   padding: 10px;
   cursor: pointer;
-  background-color: #f8ce5c; }
+  background-color: #f8ce5c;
+  white-space: pre-line;
+  word-break: break-all; }
   .entry-header .entry-title {
     font-size: 30px;
     margin-bottom: 10px; }
@@ -69,9 +70,10 @@ hr {
   padding: 10px;
   background-color: #f8da86;
   white-space: pre-line;
-  word-wrap: break-word; }
+  word-break: break-all; }
   .entry-content .details-title {
-    text-align: left; }
+    text-align: left;
+    word-wrap: break-word; }
   .entry-content .details {
     text-align: left;
     padding: 10px; }

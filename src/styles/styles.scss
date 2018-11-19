@@ -70,6 +70,8 @@ hr {
 	padding: 10px;
 	cursor: pointer;
 	background-color: #f8ce5c;
+	white-space: pre-line;
+	word-break: break-all;
 
 	.entry-title {
 		font-size: 30px;
@@ -85,10 +87,11 @@ hr {
 	padding: 10px;
 	background-color: #f8da86;
 	white-space: pre-line;
-	word-wrap: break-word;
+	word-break: break-all;
 
 	.details-title {
 		text-align: left;
+		word-wrap: break-word;
 	}
 
 	.details {
